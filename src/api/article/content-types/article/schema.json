@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titre": {
+      "type": "string"
+    },
+    "Chapeau": {
+      "type": "string"
+    },
+    "corps": {
+      "type": "text"
+    },
+    "dateIInitiale": {
+      "type": "date"
+    },
+    "autheur": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::autheur.autheur"
+    },
+    "types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::type.type"
+    }
+  }
+}
